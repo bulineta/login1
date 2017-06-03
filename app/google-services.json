@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "514776302212",
+    "firebase_url": "https://firecupon.firebaseio.com",
+    "project_id": "firecupon",
+    "storage_bucket": "firecupon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514776302212:android:eb09d5074e6970ff",
+        "android_client_info": {
+          "package_name": "firecupon.firecupon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514776302212-vl0b3tit72utbjfjillqen2hv2244gr9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "firecupon.firecupon",
+            "certificate_hash": "360e7ee7482592c56672d535295e6cdfcdd3a344"
+          }
+        },
+        {
+          "client_id": "514776302212-r9vhr2fsmriv7jiqs549i72882bg8hqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7kTrAAhX0aaNFkeaD-uOXEGYv5YV59tM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514776302212-r9vhr2fsmriv7jiqs549i72882bg8hqb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
