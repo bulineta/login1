@@ -29,6 +29,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="firecupon.firecupon.MainActivity" />
         </activity>
+        <activity android:name=".DashBoard" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".SignUp"></activity>
     </application>
 
 </manifest>
