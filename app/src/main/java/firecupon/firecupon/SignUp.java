@@ -33,11 +33,11 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_sign_up);
 
         //view
-        btnSignup = (Button)findViewById(R.id.signup_btn_register);
-        btnLogin = (TextView)findViewById(R.id.signup_btn_login);
-        btnForgotPass = (TextView)findViewById(R.id.signup_btn_forgot_pass);
-        input_email = (EditText)findViewById(R.id.signup_email);
-        input_pass = (EditText)findViewById(R.id.signup_password);
+        btnSignup = (Button) findViewById(R.id.signup_button_register);
+        btnLogin = (TextView) findViewById(R.id.signup_btn_login);
+        btnForgotPass = (TextView) findViewById(R.id.signup_btn_forgot_pass);
+        input_email = (EditText) findViewById(R.id.signup_email);
+        input_pass = (EditText) findViewById(R.id.signup_password);
 
         btnSignup.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
@@ -50,7 +50,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.signup_btn_login) {
+        if(v.getId() == R.id.btn_login) {
             startActivity(new Intent(SignUp.this, LoginActivity.class));
             finish();
         }
@@ -58,7 +58,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             startActivity(new Intent(SignUp.this, ForgotPassword.class));
             finish();
         }
-            else if(v.getId() == R.id.signup_btn_register) {
+            else if(v.getId() == R.id.signup_button_register) {
               signUpUser (input_email.getText().toString(),input_pass.getText().toString()); 
         }
     }
@@ -70,7 +70,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(!task.isSuccessful())
                         {
-                            snackbar = Snackbar.make(activity_sign_up, "Error:"+task.getException(),Snackbar.LENGTH_SHORT);
+                            snackbar = Snackbar.make(activity_sign_up, "Error: "+task.getException(),Snackbar.LENGTH_SHORT);
                             snackbar.show();
                         }
                         else{

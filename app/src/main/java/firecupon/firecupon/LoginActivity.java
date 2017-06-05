@@ -25,7 +25,6 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
     Button btnLogin;
     EditText input_email,input_password;
     TextView btnSignup,btnForgetPass;
-
     RelativeLayout activity_Login;
 
     private FirebaseAuth auth;
@@ -37,22 +36,22 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
        setContentView(R.layout.activity_login);
 
        //view
-       btnLogin = (Button)findViewById(R.id.login_btn_login);
-       input_email = (EditText)findViewById(R.id.login_input_email);
-       input_password = (EditText)findViewById(R.id.login_input_password);
+       btnLogin = (Button)findViewById(R.id.btn_login);
+       input_email = (EditText)findViewById(R.id.textEmail);
+       input_password = (EditText)findViewById(R.id.login_password);
        btnSignup = (TextView)findViewById(R.id.login_btn_signup);
        btnForgetPass = (TextView)findViewById(R.id.login_btn_forgot_password);
 
        btnSignup.setOnClickListener(this);
-       btnForgetPass.setOnClickListener(this);
+       btnLogin.setOnClickListener(this);
        btnForgetPass.setOnClickListener(this);
 
        //init firebase auth
        auth = FirebaseAuth.getInstance();
 
        //check already session, if ok-> dashboard
-       if(auth.getCurrentUser() != null)
-       startActivity(new Intent(LoginActivity.this,DashBoard.class));
+    //   if(auth.getCurrentUser() != null)
+     //  startActivity(new Intent(LoginActivity.this,DashBoard.class));
 
     }
 
@@ -68,7 +67,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
             startActivity(new Intent(LoginActivity.this,SignUp.class));
             finish();
         }
-        else if(view.getId() == R.id.login_btn_login)
+        else if(view.getId() == R.id.btn_login)
         {
            loginUser(input_email.getText().toString(),input_password.getText().toString());
         }
